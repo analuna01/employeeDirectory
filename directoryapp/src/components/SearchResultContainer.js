@@ -10,7 +10,7 @@ class SearchResultContainer extends Component {
         results: []
     };
 
-    // When this component mounts, search the Giphy API for pictures of kittens
+    // When this component mounts, search the random people API for employees
     componentDidMount() {
         this.results();
     }
@@ -38,14 +38,14 @@ class SearchResultContainer extends Component {
     };
 
     render() {
-        <div>
-            <SearchForm
-                handleFormSubmit={this.handleFormSubmit}
-                handleInputChange={this.handleInputChange}
-            />
-        </div>
         return (
             <div>
+                <SearchForm
+                    handleFormSubmit={this.handleFormSubmit}
+                    handleInputChange={this.handleInputChange}
+                />
+
+
                 {this.state.users.map(users => (
 
                     <table key={users.login.uuid}>

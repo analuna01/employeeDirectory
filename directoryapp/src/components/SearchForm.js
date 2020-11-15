@@ -2,10 +2,9 @@ import React from "react";
 
 function SearchForm(props) {
   return (
-    <form 
-    className="mx-5" 
-    autoComplete="on"
-    onSubmit={props.handleFormSubmit}
+    <form
+      autoComplete="on"
+      onSubmit={props.handleFormSubmit}
     >
       <div className="form-group d-flex align-items-center justify-content-start">
         <label htmlFor="search">Search:</label>
@@ -18,6 +17,9 @@ function SearchForm(props) {
           id="search"
           onChange={props.handleInputChange}
         />
+        <button onClick={props.handleFormSubmit} className="btn btn-primary">
+          Search
+                </button>
       </div>
     </form>
   );
