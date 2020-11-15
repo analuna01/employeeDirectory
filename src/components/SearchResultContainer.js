@@ -65,12 +65,14 @@ class SearchResultContainer extends Component {
                             </tr>
                         </thead>
                         <tbody>
-                            <td><img src={users.picture.large}></img></td>
-                            <td>{users.name.first}</td>
-                            <td>{users.name.last}</td>
-                            <td>{users.phone}</td>
-                            <td>{users.email}</td>
-                            <td>{(users.dob.date).substring(0, 10)}</td>
+                            <tr>
+                                <td><img src={users.picture.large} alt="employee"></img></td>
+                                <td>{users.name.first}</td>
+                                <td>{users.name.last}</td>
+                                <td>{users.phone}</td>
+                                <td>{users.email}</td>
+                                <td>{(users.dob.date).substring(0, 10)}</td>
+                            </tr>
                         </tbody>
                     </MDBTable>
                 ))}
