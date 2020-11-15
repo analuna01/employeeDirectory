@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../utils/API"
 // import ResultList from "./ResultList";
 import SearchForm from "./SearchForm";
+import { MDBTable } from 'mdbreact'
 
 class SearchResultContainer extends Component {
     state = {
@@ -40,6 +41,10 @@ class SearchResultContainer extends Component {
     render() {
         return (
             <div>
+                <div className="jumbotron text-center">
+                    <h1>Employee Directory</h1>
+                </div>
+
                 <SearchForm
                     handleFormSubmit={this.handleFormSubmit}
                     handleInputChange={this.handleInputChange}
@@ -48,7 +53,7 @@ class SearchResultContainer extends Component {
 
                 {this.state.users.map(users => (
 
-                    <table key={users.login.uuid}>
+                    <MDBTable key={users.login.uuid}>
                         <thead>
                             <tr>
                                 <th></th>
@@ -60,14 +65,14 @@ class SearchResultContainer extends Component {
                             </tr>
                         </thead>
                         <tbody>
-                            <th><img src={users.picture.large}></img></th>
-                            <th>{users.name.first}</th>
-                            <th>{users.name.last}</th>
-                            <th>{users.phone}</th>
-                            <th>{users.email}</th>
-                            <th>{(users.dob.date).substring(0, 10)}</th>
+                            <td><img src={users.picture.large}></img></td>
+                            <td>{users.name.first}</td>
+                            <td>{users.name.last}</td>
+                            <td>{users.phone}</td>
+                            <td>{users.email}</td>
+                            <td>{(users.dob.date).substring(0, 10)}</td>
                         </tbody>
-                    </table>
+                    </MDBTable>
                 ))}
             </div>
         )
