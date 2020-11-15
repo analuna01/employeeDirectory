@@ -22,6 +22,7 @@ MIT
 Contributions are welcomed upon request.
 
 ## Demo
+<img src= "/media/employeeDirectory.png">
 
 ## Questions
 Github: https://github.com/analuna01
