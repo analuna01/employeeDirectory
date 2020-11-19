@@ -3,6 +3,9 @@
 # employeeDirectory
 Unit 19 React Homework: Employee Directory
 
+## Deployed App
+https://blooming-crag-56667.herokuapp.com/
+
 ## Description
 This is an employee directory created using React. This project required to break up the application's UI into components, manage component state, and respond to user events.
 
