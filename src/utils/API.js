@@ -1,5 +1,6 @@
 import axios from "axios";
-eslint-disable-next-line
+
+//eslint-disable-next-line
 export default {
   // Gets all users
   search: function() {
