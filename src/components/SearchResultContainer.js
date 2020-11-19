@@ -28,15 +28,29 @@ class SearchResultContainer extends Component {
     };
 
     handleInputChange = event => {
-        this.setState({ value: event.target.value });
-        this.setState({ results: event.target.value })
+        this.setState({ search: event.target.value });
+        if(event.target.value === "") 
+            this.setState({users: this.state.results});
+            
+        // if(`${event.target.value.length === 1}`)
+        //     event.target.value = event.target.value.toUpperCase();
 
+        // if(`${event.target.value.length === 2}`)
+        //     event.target.value = event.target.value.toLowerCase();
+
+        // if (`${this.state.search.length === 0}` )
+        // this.setState({search:this.state.search.toUpperCase()});
+        console.log(this.state.search);
     };
 
-    // When the form is submitted, search the Giphy API for `this.state.search`
+    // When the form is submitted, search the random people API for `this.state.search`
     handleFormSubmit = event => {
         event.preventDefault();
+        this.setState({results: this.state.users})
+        this.setState({users: this.state.users.filter((user)=> user.name.first.toLowerCase() === this.state.search)});
+        console.log("results:",this.state.results);
     };
+
 
     render() {
         return (

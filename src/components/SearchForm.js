@@ -3,7 +3,7 @@ import React from "react";
 function SearchForm(props) {
   return (
     <form
-      autoComplete="on"
+      autoComplete="off"
       onSubmit={props.handleFormSubmit}
     >
       <div className="form-group d-flex align-items-center justify-content-start">
