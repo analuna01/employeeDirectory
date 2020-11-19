@@ -22,7 +22,7 @@ The purpose of this application is to allow users to find employees using the se
 MIT
 
 ## Contributing
-Contributions are welcomed upon request.
+Contributions are welcome upon request.
 
 ## Demo
 <img src= "/media/employeeDirectory.png">

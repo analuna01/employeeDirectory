@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import API from "../utils/API"
-// import ResultList from "./ResultList";
+import API from "../utils/API";
 import SearchForm from "./SearchForm";
 import { MDBTable } from 'mdbreact'
 
